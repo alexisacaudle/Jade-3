@@ -18,6 +18,7 @@ class main: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    
     func textFieldDidBeginEditing(textField: UITextField) {
         scrollView.setContentOffset(CGPointMake(0, 50), animated: true)
     }
@@ -40,9 +41,10 @@ class main: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func nextButton(sender: AnyObject) {
-        defaults.setObject(firstName.text, forKey: "firstName")
-        defaults.synchronize()
-        print("fn=\(firstName.text)")
+            defaults.setObject(firstName.text, forKey: "firstName")
+            defaults.synchronize()
+            print("\(firstName.text)")
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -60,7 +62,7 @@ class userGenderIdentityScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userName.text = "Hello \(defaults.stringForKey("firstName"))!"
+        userName.text = "Hello \(userNameString)!"
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,12 +83,15 @@ class userGenderIdentityScreen: UIViewController {
 class userInterestScreen: UIViewController {
     var userNameString = String()
     
+    @IBAction func backButton(sender: AnyObject) {
+    }
+    
     @IBOutlet weak var interestLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        interestLabel.text = "\(userNameString), who are you interested in?"
     }
     
     override func didReceiveMemoryWarning() {
@@ -100,23 +105,33 @@ class userInterestScreen: UIViewController {
 // MARK: Questions class
 
 class questions: UIViewController {
+    var darkTally = 0
+    var lightTally = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func light(sender: AnyObject) {
-        self.performSegueWithIdentifier("segue", sender: sender)
-        print("light")
+    @IBAction func light(sender: UIButton) {
+        lightButtonTapped(1)
+        print("light: \(lightTally)")
+        performSegueWithIdentifier("segue", sender: sender)
     }
     
-    @IBAction func dark(sender: AnyObject) {
-        self.performSegueWithIdentifier("segue", sender: sender)
-        print("dark")
+    @IBAction func dark(sender: UIButton) {
+        darkButtonTapped(1)
+        print("dark: \(darkTally)")
+        performSegueWithIdentifier("segue", sender: sender)
     }
     
+    func darkButtonTapped(taps:Int){
+        darkTally += 1
+    }
     
+    func lightButtonTapped(taps:Int){
+        lightTally += 1
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
