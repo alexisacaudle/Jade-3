@@ -104,83 +104,77 @@ class userInterestScreen: UIViewController {
 
 // MARK: Questions class
 
-class questions: UIViewController {
-    var darkTally = 0
-    var lightTally = 0
+var totalTally = Int()
 
-    
+class questions: UIViewController {
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func setLightTallySum(taps:Int){
+        defaults.setInteger(taps, forKey: "lightTaps")
+    }
+    
+    func setDarkTallySum(taps:Int){
+        defaults.setInteger(taps, forKey: "darkTaps")
+    }
+    
+    func getLightTallySum()-> Int{
+        return defaults.integerForKey("lightTaps")
+    }
+    
+    func getDarkTallySum()-> Int{
+        return defaults.integerForKey("darkTaps")
+    }
+    
 
     @IBAction func light(sender: UIButton) {
-        lightButtonTapped(1)
-        print("light: \(lightTally)")
+        let newLightTallySum = getLightTallySum() + 1
+        setLightTallySum(newLightTallySum)
+        print("light:", newLightTallySum)
         performSegueWithIdentifier("segue", sender: sender)
     }
     
     @IBAction func dark(sender: UIButton) {
-        darkButtonTapped(1)
-        print("dark: \(darkTally)")
+        let newDarkTallySum = getDarkTallySum() + 1
+        setDarkTallySum(newDarkTallySum)
+        print("dark:", newDarkTallySum)
         performSegueWithIdentifier("segue", sender: sender)
     }
     
-    func darkButtonTapped(taps:Int){
-        darkTally += 1
-    }
-    
-    func lightButtonTapped(taps:Int){
-        lightTally += 1
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
+    @IBAction func passResults(sender: AnyObject) {
+        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            let explanationVC : explanation = segue.destinationViewController as! explanation
+            explanationVC.heldResults = "Held"
+        if getDarkTallySum() < getLightTallySum(){
+            print("dark skin preferred")
+        }else{
+            print("light skin preferred")
+            }
+        }
+    }
 }
 
 
-// MARK: Considerations class
-
-class considerations: UIViewController {
-    
-    @IBAction func optionEndearing(sender: AnyObject) {
-        self.performSegueWithIdentifier("segue", sender: sender)
-            print("endearing")
-    }
-    
-    @IBAction func optionUnappealing(sender: AnyObject) {
-        self.performSegueWithIdentifier("segue", sender: sender)
-            print("unappealing")
-    }
-    
-    @IBAction func optionNeutral(sender: AnyObject) {
-        self.performSegueWithIdentifier("segue", sender: sender)
-            print("neutral")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-}
 
 // MARK: Explanation class
 
 class explanation: UIViewController {
+     var heldResults = String()
+
+    @IBOutlet weak var resultsHolder: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print(heldResults)
     }
     
     override func didReceiveMemoryWarning() {
