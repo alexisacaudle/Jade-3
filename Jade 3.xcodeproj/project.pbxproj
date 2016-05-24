@@ -14,6 +14,7 @@
 		0AD9423D1CC98C19005F3520 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9423B1CC98C19005F3520 /* LaunchScreen.storyboard */; };
 		0AD942481CC98C19005F3520 /* Jade_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD942471CC98C19005F3520 /* Jade_3Tests.swift */; };
 		0AD942531CC98C19005F3520 /* Jade_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD942521CC98C19005F3520 /* Jade_3UITests.swift */; };
+		0AE4CCE01CD28F14009D554E /* MyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE4CCDF1CD28F14009D554E /* MyData.swift */; };
 		0AE783171CCC4AFF0076ACF8 /* JadeModelData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AE783151CCC4AFF0076ACF8 /* JadeModelData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		0AD9424E1CC98C19005F3520 /* Jade 3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jade 3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD942521CC98C19005F3520 /* Jade_3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jade_3UITests.swift; sourceTree = "<group>"; };
 		0AD942541CC98C19005F3520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AE4CCDF1CD28F14009D554E /* MyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyData.swift; sourceTree = "<group>"; };
 		0AE783161CCC4AFF0076ACF8 /* JadeModelData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JadeModelData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				0AD942321CC98C19005F3520 /* AppDelegate.swift */,
 				0AE783151CCC4AFF0076ACF8 /* JadeModelData.xcdatamodeld */,
 				0AD942361CC98C19005F3520 /* Main.storyboard */,
+				0AE4CCDF1CD28F14009D554E /* MyData.swift */,
 				0AD942341CC98C19005F3520 /* Main.swift */,
 				0AD942391CC98C19005F3520 /* Assets.xcassets */,
 				0AD9423B1CC98C19005F3520 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				0AE783171CCC4AFF0076ACF8 /* JadeModelData.xcdatamodeld in Sources */,
 				0AD942351CC98C19005F3520 /* Main.swift in Sources */,
 				0AD942331CC98C19005F3520 /* AppDelegate.swift in Sources */,
+				0AE4CCE01CD28F14009D554E /* MyData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

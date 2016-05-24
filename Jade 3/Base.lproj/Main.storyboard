@@ -683,20 +683,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bG4-Qv-Qia">
-                                <rect key="frame" x="248" y="511" width="46" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="Xge-DT-hFt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="passResults:" destination="Pod-Bu-2Mc" eventType="touchUpInside" id="Nb5-Zh-pW5"/>
-                                    <segue destination="JyO-PP-QDO" kind="show" identifier="segue" id="RZb-Xi-Wxq"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -717,9 +703,7 @@
                             <constraint firstItem="bQv-Pi-v60" firstAttribute="leading" secondItem="mh3-fu-8hZ" secondAttribute="leading" id="YaZ-Y9-C7Q"/>
                             <constraint firstItem="bQv-Pi-v60" firstAttribute="leading" secondItem="khI-Bv-Ujt" secondAttribute="trailing" id="Ys7-O4-Gfj"/>
                             <constraint firstItem="khI-Bv-Ujt" firstAttribute="top" secondItem="bQv-Pi-v60" secondAttribute="top" id="ZEE-5I-uBj"/>
-                            <constraint firstItem="mh3-fu-8hZ" firstAttribute="trailing" secondItem="bG4-Qv-Qia" secondAttribute="trailing" id="auA-Rk-ZbO"/>
                             <constraint firstItem="khI-Bv-Ujt" firstAttribute="leading" secondItem="UR0-iR-GW9" secondAttribute="leading" id="brc-Pe-bYI"/>
-                            <constraint firstItem="71p-nI-nTu" firstAttribute="baseline" secondItem="bG4-Qv-Qia" secondAttribute="baseline" id="cSL-QY-IoK"/>
                             <constraint firstItem="71p-nI-nTu" firstAttribute="top" secondItem="UR0-iR-GW9" secondAttribute="bottom" constant="26" id="iac-ku-aV3"/>
                             <constraint firstItem="O5w-Se-bDI" firstAttribute="centerX" secondItem="dGv-qk-WWo" secondAttribute="centerX" id="jY8-ry-WfU"/>
                             <constraint firstItem="khI-Bv-Ujt" firstAttribute="bottom" secondItem="bQv-Pi-v60" secondAttribute="bottom" id="lyI-qS-2Jl"/>
@@ -730,84 +714,13 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="QPQ-FB-SLZ" kind="show" identifier="segue" id="h00-FC-c2R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkS-Xa-g6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2665" y="69"/>
-        </scene>
-        <!--Explanation-->
-        <scene sceneID="As7-eA-pC5">
-            <objects>
-                <viewController id="JyO-PP-QDO" customClass="explanation" customModule="Jade_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6gf-iE-ccp"/>
-                        <viewControllerLayoutGuide type="bottom" id="8hG-mr-dr8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Dog-eQ-TXb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCB-H3-ZeH">
-                                <rect key="frame" x="20" y="511" width="46" height="37"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l17-l4-i0f">
-                                <rect key="frame" x="254" y="511" width="46" height="37"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="QPQ-FB-SLZ" kind="show" id="gEc-vY-2N8"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Chemistry Questions are complete." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4w-vB-Ixt">
-                                <rect key="frame" x="23" y="157" width="275" height="73"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="73" id="WGn-QF-1AA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="25"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap &quot;Next&quot; to see your matches!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yms-pn-VTD">
-                                <rect key="frame" x="23" y="339" width="275" height="71"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="71" id="hFS-oO-jMK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="25"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jade03" translatesAutoresizingMaskIntoConstraints="NO" id="d00-gp-hO9">
-                                <rect key="frame" x="146" y="268" width="28" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="28" id="VJI-Jr-Nno"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="d00-gp-hO9" firstAttribute="top" secondItem="W4w-vB-Ixt" secondAttribute="bottom" constant="38" id="2Z6-Qk-mbe"/>
-                            <constraint firstItem="d00-gp-hO9" firstAttribute="centerY" secondItem="Dog-eQ-TXb" secondAttribute="centerY" id="JrT-cw-e0b"/>
-                            <constraint firstItem="yms-pn-VTD" firstAttribute="trailing" secondItem="W4w-vB-Ixt" secondAttribute="trailing" id="UdH-PD-dYh"/>
-                            <constraint firstItem="W4w-vB-Ixt" firstAttribute="centerX" secondItem="Dog-eQ-TXb" secondAttribute="centerX" id="Vdf-HN-0xQ"/>
-                            <constraint firstItem="d00-gp-hO9" firstAttribute="centerX" secondItem="yms-pn-VTD" secondAttribute="centerX" id="Vy9-YM-PKU"/>
-                            <constraint firstItem="W4w-vB-Ixt" firstAttribute="top" secondItem="6gf-iE-ccp" secondAttribute="bottom" constant="137" id="mS4-D2-MTg"/>
-                            <constraint firstAttribute="bottom" secondItem="yms-pn-VTD" secondAttribute="bottom" constant="158" id="mYU-bm-Lk4"/>
-                            <constraint firstItem="yms-pn-VTD" firstAttribute="leading" secondItem="W4w-vB-Ixt" secondAttribute="leading" id="npg-WD-udx"/>
-                            <constraint firstItem="yms-pn-VTD" firstAttribute="leading" secondItem="Dog-eQ-TXb" secondAttribute="leadingMargin" constant="7" id="oR8-nu-AJe"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="resultsHolder" destination="l17-l4-i0f" id="XdT-zU-oph"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U30-1N-qXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3109" y="69"/>
         </scene>
         <!--Results-->
         <scene sceneID="77Q-3M-eiE">
@@ -837,9 +750,6 @@
                                 <state key="normal" title="Back">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="JyO-PP-QDO" kind="show" id="nwa-Y2-OeV"/>
-                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFM-bx-zZ1">
                                 <rect key="frame" x="0.0" y="87" width="320" height="405"/>
@@ -849,7 +759,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="73" id="d61-fz-CmN"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ojh-ss-hSb">
@@ -857,19 +767,17 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="328" id="ltC-vL-K5E"/>
                                         </constraints>
-                                        <string key="text">Jade is a social experiment meant to highlight colorism. The answers you provided to the previous questions were meant to gauge whether you have a particular skin tone preference. 
+                                        <string key="text">Jade is a social experiment meant to highlight colorism. The answers you provided to the previous questions were meant to gauge whether you have a particular skin tone.
 
-Here are your results:
-
-According to your answers, you have a preference for lighter skin. This means you chose more people with darker skin than lighter skin.
-
-Your Score:
-
-Dark skin: 3
-Light skin: 1</string>
+Here are your results:</string>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Er1-L9-h67">
+                                        <rect key="frame" x="23" y="278" width="280" height="79"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ojh-ss-hSb" secondAttribute="trailing" constant="17" id="5jy-Ah-hDo"/>
@@ -911,6 +819,9 @@ Light skin: 1</string>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="myLabel" destination="Er1-L9-h67" id="9pe-Ob-cis"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ML-Oq-evd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -991,85 +902,6 @@ We can do it together.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8an-GW-wBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3983" y="69"/>
-        </scene>
-        <!--Explanation-->
-        <scene sceneID="LIT-nc-rp0">
-            <objects>
-                <viewController id="sDC-F8-tBP" customClass="explanation" customModule="Jade_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oND-di-buX"/>
-                        <viewControllerLayoutGuide type="bottom" id="J0r-Dd-gdL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kB3-DH-RHc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7A-qi-btr">
-                                <rect key="frame" x="20" y="511" width="46" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="dF6-fo-Snh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sp8-LT-Qz6">
-                                <rect key="frame" x="254" y="511" width="46" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="10J-MA-dvU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Vwe-IV-NLV" kind="show" id="83K-vq-qlU"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Chemistry Questions are complete." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bw-mc-vLr">
-                                <rect key="frame" x="23" y="157" width="275" height="73"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="25"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap &quot;Next&quot; to see your matches!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x48-Yu-mxK">
-                                <rect key="frame" x="23" y="339" width="275" height="71"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="71" id="nrU-9y-WvP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="25"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jade03" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-FW-5Uy">
-                                <rect key="frame" x="146" y="268" width="28" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="28" id="63D-Q4-Ejg"/>
-                                    <constraint firstAttribute="height" constant="32" id="krq-nT-mO5"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6fv-FW-5Uy" firstAttribute="centerY" secondItem="kB3-DH-RHc" secondAttribute="centerY" id="1li-Et-EPc"/>
-                            <constraint firstAttribute="bottom" secondItem="l7A-qi-btr" secondAttribute="bottom" constant="20" symbolic="YES" id="Bea-Ow-VJB"/>
-                            <constraint firstItem="7Bw-mc-vLr" firstAttribute="leading" secondItem="kB3-DH-RHc" secondAttribute="leadingMargin" constant="7" id="MXC-aD-vLg"/>
-                            <constraint firstItem="7Bw-mc-vLr" firstAttribute="leading" secondItem="x48-Yu-mxK" secondAttribute="leading" id="PgE-WL-tY0"/>
-                            <constraint firstItem="x48-Yu-mxK" firstAttribute="top" secondItem="6fv-FW-5Uy" secondAttribute="bottom" constant="39" id="WKa-vA-KPb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sp8-LT-Qz6" secondAttribute="trailing" constant="4" id="Zip-7k-XQa"/>
-                            <constraint firstItem="l7A-qi-btr" firstAttribute="baseline" secondItem="sp8-LT-Qz6" secondAttribute="baseline" id="lqM-yH-kLI"/>
-                            <constraint firstItem="7Bw-mc-vLr" firstAttribute="top" secondItem="oND-di-buX" secondAttribute="bottom" constant="137" id="nxk-yl-Bcj"/>
-                            <constraint firstItem="6fv-FW-5Uy" firstAttribute="centerX" secondItem="x48-Yu-mxK" secondAttribute="centerX" id="r5o-bc-8GT"/>
-                            <constraint firstItem="7Bw-mc-vLr" firstAttribute="centerX" secondItem="kB3-DH-RHc" secondAttribute="centerX" id="s8O-c5-2qJ"/>
-                            <constraint firstItem="7Bw-mc-vLr" firstAttribute="trailing" secondItem="x48-Yu-mxK" secondAttribute="trailing" id="tfX-17-Yij"/>
-                            <constraint firstItem="l7A-qi-btr" firstAttribute="leading" secondItem="kB3-DH-RHc" secondAttribute="leadingMargin" constant="4" id="thf-HT-aSF"/>
-                            <constraint firstItem="6fv-FW-5Uy" firstAttribute="top" secondItem="7Bw-mc-vLr" secondAttribute="bottom" constant="38" id="zk3-32-fnM"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IZ3-ka-CAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3109" y="716"/>
         </scene>
         <!--Questions-->
         <scene sceneID="KhV-gk-fOZ">
@@ -1286,7 +1118,7 @@ We can do it together.</string>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="sDC-F8-tBP" kind="show" identifier="segue" id="HCY-ny-eWR"/>
+                        <segue destination="Vwe-IV-NLV" kind="show" identifier="segue" id="jj7-Si-NUj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aFr-jh-NSE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2062,91 +1894,12 @@ We can do it together.</string>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="tmf-af-QwY" kind="show" identifier="segue" id="8bh-YF-0Zi"/>
+                        <segue destination="iPq-Dn-BIU" kind="show" identifier="segue" id="SD5-cl-8om"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEe-X3-Zfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2665" y="1427"/>
-        </scene>
-        <!--Explanation-->
-        <scene sceneID="lcV-36-91D">
-            <objects>
-                <viewController id="tmf-af-QwY" customClass="explanation" customModule="Jade_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VE0-GX-11y"/>
-                        <viewControllerLayoutGuide type="bottom" id="ekT-gd-Wb8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aIH-9d-p1u">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGL-E1-48L">
-                                <rect key="frame" x="20" y="511" width="46" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="QI9-Kk-Ihr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Chemistry Questions are complete." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q14-GB-EIl">
-                                <rect key="frame" x="23" y="157" width="275" height="73"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="25"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap &quot;Next&quot; to see your matches!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmh-ZN-cbC">
-                                <rect key="frame" x="23" y="339" width="275" height="71"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="71" id="4qJ-CG-Txf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="25"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jade03" translatesAutoresizingMaskIntoConstraints="NO" id="kn5-4c-sM3">
-                                <rect key="frame" x="146" y="268" width="28" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="05l-gK-hmc"/>
-                                    <constraint firstAttribute="width" constant="28" id="BHu-NL-hQ9"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9f-Xa-mSn">
-                                <rect key="frame" x="254" y="511" width="46" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="KbY-St-iIU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="iPq-Dn-BIU" kind="show" id="M04-Rz-9ia"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="nGL-E1-48L" secondAttribute="bottom" constant="20" symbolic="YES" id="QBi-QU-qw1"/>
-                            <constraint firstItem="q14-GB-EIl" firstAttribute="leading" secondItem="aIH-9d-p1u" secondAttribute="leadingMargin" constant="7" id="S2k-yX-pie"/>
-                            <constraint firstItem="q14-GB-EIl" firstAttribute="trailing" secondItem="fmh-ZN-cbC" secondAttribute="trailing" id="UMT-pm-NER"/>
-                            <constraint firstItem="nGL-E1-48L" firstAttribute="leading" secondItem="aIH-9d-p1u" secondAttribute="leadingMargin" constant="4" id="YCm-aV-pig"/>
-                            <constraint firstItem="kn5-4c-sM3" firstAttribute="centerY" secondItem="aIH-9d-p1u" secondAttribute="centerY" id="bcX-ZQ-369"/>
-                            <constraint firstItem="q14-GB-EIl" firstAttribute="leading" secondItem="fmh-ZN-cbC" secondAttribute="leading" id="dfF-c8-aqt"/>
-                            <constraint firstItem="q14-GB-EIl" firstAttribute="top" secondItem="VE0-GX-11y" secondAttribute="bottom" constant="137" id="hdv-T7-eC7"/>
-                            <constraint firstItem="fmh-ZN-cbC" firstAttribute="top" secondItem="kn5-4c-sM3" secondAttribute="bottom" constant="39" id="oCk-g3-yp2"/>
-                            <constraint firstItem="q14-GB-EIl" firstAttribute="centerX" secondItem="aIH-9d-p1u" secondAttribute="centerX" id="shq-ZK-dlb"/>
-                            <constraint firstItem="kn5-4c-sM3" firstAttribute="top" secondItem="q14-GB-EIl" secondAttribute="bottom" constant="38" id="u3n-ZH-1Q4"/>
-                            <constraint firstItem="nGL-E1-48L" firstAttribute="baseline" secondItem="g9f-Xa-mSn" secondAttribute="baseline" id="xG8-TA-Pqf"/>
-                            <constraint firstItem="kn5-4c-sM3" firstAttribute="centerX" secondItem="fmh-ZN-cbC" secondAttribute="centerX" id="y4A-YV-5A2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="g9f-Xa-mSn" secondAttribute="trailing" constant="4" id="zYU-LO-5YD"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t94-o7-ELp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3109" y="1427"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8yv-c8-2YM">
@@ -2597,7 +2350,7 @@ We can do it together.</string>
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="sDC-F8-tBP" kind="show" id="moU-X5-T6B"/>
+                                    <segue destination="SHG-i3-o8j" kind="show" id="apJ-1s-Dwe"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJ0-U8-6Bn">
@@ -2608,7 +2361,7 @@ We can do it together.</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="73" id="0gW-3T-ncM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gFc-5n-LVM">
@@ -2618,17 +2371,15 @@ We can do it together.</string>
                                         </constraints>
                                         <string key="text">Jade is a social experiment meant to highlight colorism. The answers you provided to the previous questions were meant to gauge whether you have a particular skin tone preference. 
 
-Here are your results:
-
-According to your answers, you have a preference for darker skin. This means you chose more people with darker skin than lighter skin.
-
-Your Score:
-
-Light skin: 4
-Dark skin: 0</string>
+Here are your results:</string>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFz-vw-hu3">
+                                        <rect key="frame" x="23" y="279" width="280" height="84"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="pBM-Je-rAJ" firstAttribute="leading" secondItem="gFc-5n-LVM" secondAttribute="leading" id="2vU-fn-k10"/>
@@ -2670,6 +2421,9 @@ Dark skin: 0</string>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="myLabel" destination="HFz-vw-hu3" id="DPY-vC-BMg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wmo-CH-x35" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2704,7 +2458,7 @@ Dark skin: 0</string>
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tmf-af-QwY" kind="show" id="dMT-Eq-0em"/>
+                                    <segue destination="FPW-aw-OeD" kind="show" id="Gow-zq-cif"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8n-wo-TVG">
@@ -2715,7 +2469,7 @@ Dark skin: 0</string>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="73" id="JFc-ql-WY9"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S95-QN-gLU">
@@ -2725,17 +2479,15 @@ Dark skin: 0</string>
                                         </constraints>
                                         <string key="text">Jade is a social experiment meant to highlight colorism. The answers you provided to the previous questions were meant to gauge whether you have a particular skin tone preference. 
 
-Here are your results:
-
-According to your answers, you do not have a skin tone preference. This means you chose an equal number of dark-skinned people and light-skinned people.
-
-Your Score:
-
-Light skin: 2
-Dark skin: 2</string>
+Here are your results:</string>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAT-FY-sHi">
+                                        <rect key="frame" x="23" y="283" width="280" height="80"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="S95-QN-gLU" secondAttribute="trailing" constant="17" id="1CK-eP-DBJ"/>
@@ -2777,6 +2529,9 @@ Dark skin: 2</string>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="myLabel" destination="EAT-FY-sHi" id="mQR-iy-Z68"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m2O-Rb-Hb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2784,7 +2539,6 @@ Dark skin: 2</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Jade03" width="111" height="111"/>
         <image name="JadeBlack" width="316" height="112"/>
         <image name="JadeWhite" width="316" height="111"/>
         <image name="female1" width="361" height="361"/>
@@ -2806,23 +2560,22 @@ Dark skin: 2</string>
         <image name="male8" width="363" height="362"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="wd5-Ix-k23"/>
+        <segue reference="UBs-Xc-l47"/>
+        <segue reference="DWB-Z9-Gnc"/>
         <segue reference="klD-zn-YsV"/>
         <segue reference="hT9-jr-bIu"/>
-        <segue reference="tw3-ss-SCD"/>
-        <segue reference="7pO-tT-zhc"/>
-        <segue reference="dMT-Eq-0em"/>
-        <segue reference="pJD-Nw-cxj"/>
-        <segue reference="moU-X5-T6B"/>
-        <segue reference="7kF-19-meK"/>
-        <segue reference="pTH-Zf-cWj"/>
-        <segue reference="nwa-Y2-OeV"/>
-        <segue reference="DWB-Z9-Gnc"/>
-        <segue reference="vNP-Xq-3NM"/>
-        <segue reference="wd5-Ix-k23"/>
-        <segue reference="ASR-zO-3Rk"/>
-        <segue reference="fSL-Ae-a8s"/>
-        <segue reference="0Wf-0n-jMF"/>
-        <segue reference="h38-Uc-3W2"/>
+        <segue reference="apJ-1s-Dwe"/>
+        <segue reference="jj7-Si-NUj"/>
         <segue reference="gFt-KI-hTM"/>
+        <segue reference="ZJ3-S8-8m2"/>
+        <segue reference="pTH-Zf-cWj"/>
+        <segue reference="h00-FC-c2R"/>
+        <segue reference="tw3-ss-SCD"/>
+        <segue reference="h38-Uc-3W2"/>
+        <segue reference="0Wf-0n-jMF"/>
+        <segue reference="fSL-Ae-a8s"/>
+        <segue reference="SD5-cl-8om"/>
+        <segue reference="Gow-zq-cif"/>
     </inferredMetricsTieBreakers>
 </document>

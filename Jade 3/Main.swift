@@ -104,7 +104,7 @@ class userInterestScreen: UIViewController {
 
 // MARK: Questions class
 
-var totalTally = Int()
+//var totalTally = Int()
 
 class questions: UIViewController {
  
@@ -113,18 +113,34 @@ class questions: UIViewController {
     }
     
     func setLightTallySum(taps:Int){
+        
+        
+        lightTally += 1
+        print("\(lightTally)")
+        
         defaults.setInteger(taps, forKey: "lightTaps")
     }
     
     func setDarkTallySum(taps:Int){
+        
+        
+        darkTally += 1
+        print("\(darkTally)")
+        
         defaults.setInteger(taps, forKey: "darkTaps")
     }
     
     func getLightTallySum()-> Int{
+
+
+        
         return defaults.integerForKey("lightTaps")
     }
     
     func getDarkTallySum()-> Int{
+        
+        
+        
         return defaults.integerForKey("darkTaps")
     }
     
@@ -133,6 +149,7 @@ class questions: UIViewController {
         let newLightTallySum = getLightTallySum() + 1
         setLightTallySum(newLightTallySum)
         print("light:", newLightTallySum)
+        
         performSegueWithIdentifier("segue", sender: sender)
     }
     
@@ -148,50 +165,63 @@ class questions: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func passResults(sender: AnyObject) {
-        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            let explanationVC : explanation = segue.destinationViewController as! explanation
-            explanationVC.heldResults = "Held"
-        if getDarkTallySum() < getLightTallySum(){
-            print("dark skin preferred")
-        }else{
-            print("light skin preferred")
-            }
-        }
-    }
-}
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//            let explanationVC : results = segue.destinationViewController as! results
+//            explanationVC.myLabel.text = "\(getLightTallySum())"
+//    }
+//}
 
 
 
 // MARK: Explanation class
 
-class explanation: UIViewController {
-     var heldResults = String()
-
-    @IBOutlet weak var resultsHolder: UIButton!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print(heldResults)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
+//class explanation: UIViewController {
+//     var heldResults = String()
+//
+//    @IBOutlet weak var resultsHolder: UIButton!
+//    
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view, typically from a nib.
+//        print(heldResults)
+//    }
+//    
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
+//    
+//    
 }
 
 // MARK: Results class
 
 class results: UIViewController {
     
+    
+    @IBOutlet weak var myLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+    
+        if (darkTally > lightTally){
+                resultPhrase = "You have a preference for darker-skinned people."
+        } else if (darkTally < lightTally){
+       resultPhrase = "You have a preference for lighter-skinned people."
+        
+        } else if (darkTally == lightTally){
+
+            resultPhrase = "You do not have a particular preference for skin tone."
+
+            
+        }else {
+            resultPhrase = "hey "
+        }
+        
+        
+    myLabel.text = resultPhrase
     }
     
     override func didReceiveMemoryWarning() {
@@ -199,6 +229,10 @@ class results: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+ 
+    func recordData(userSelection: Int){
+        
+    }
     
 }
 
